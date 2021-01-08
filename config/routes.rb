@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :portfolios, expect: [:show]
+  get "angular-items", to: "portfolios#angular"
   get 'portfolio/:id', to: "portfolios#show", as: 'portfolio_show'
   get 'about', to: "page#about"
   get "contact", to: 'page#contact'
