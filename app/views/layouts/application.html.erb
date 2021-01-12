@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>PortfolioWeb</title>
+    <title><%= @page_title%></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,7 +15,7 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%if current_user.is_a?(OpenStruct) %>
+    <%if current_user.is_a?(OpenStruct) %> <%#checking for the class it belongs to user or OpenStruct!%>
     <%=link_to "Register", new_user_registration_path %>
     <%=link_to "Login", new_user_session_path %>
     <%else%>
